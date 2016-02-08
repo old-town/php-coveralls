@@ -229,7 +229,7 @@ class Configurator
         $realDir = $file->getRealDir($realpath, $rootDir);
 
         if (!$file->isRealDirWritable($realDir)) {
-            throw new InvalidConfigurationException(sprintf('json_path is not writable %s', $realDir));
+            throw new InvalidConfigurationException(sprintf('json_path is not writable: %s', $realDir));
         }
 
         return $realpath;
