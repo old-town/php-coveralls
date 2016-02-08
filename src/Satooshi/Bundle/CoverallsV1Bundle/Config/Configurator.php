@@ -222,7 +222,7 @@ class Configurator
         $realFilePath = $file->getRealPath($realpath, $rootDir);
 
         if ($realFilePath !== false && !$file->isRealFileWritable($realFilePath)) {
-            throw new InvalidConfigurationException('json_path is not writable');
+            throw new InvalidConfigurationException(sprintf('json_path is not writable!: %s', $realFilePath));
         }
 
         // validate parent dir
